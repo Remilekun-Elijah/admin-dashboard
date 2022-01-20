@@ -1,0 +1,70 @@
+<div class="container-fluid">
+  <div class="header d-flex flex-column justify-center align-center py-5 p_shopper" style="height: 260px !important;">
+    <h3 class="text-center">Shop For Me Service</h3>
+    <div class="flex justify-content-center align-items-center">
+
+      <div class="col-sm-3 flex-column align-center">
+        <img src="./asset/image/products/form.svg" alt="" srcset=""
+          style="height: 80px; width: 100px; object-fit: contain">
+        <h5 class="text-center mt-4">Fill the form</h5>
+      </div>
+      <div class="col-sm-3 flex-column align-center mx-5">
+        <img src="./asset/image/products/shopNpay.svg" alt="" srcset=""
+          style="height: 130px; width: 200px; object-fit: contain;" class="">
+        <h5 class="text-center">We shop and pay online for you</h5>
+      </div>
+      <div class="col-sm-3 flex-column align-center">
+        <img src="./asset/image/products/home.svg" alt="" srcset=""
+          style="height: 100px; width: 100px; object-fit: contain">
+        <h5 class="text-center mt-3">Products gets delivered to your address</h5>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="">
+    <center><span class="page-title text-center" style="top: 355px !important">Personal Shopper</span></center>
+    <span style="margin-top: -10px; z-index: -5 !important;"
+      class="border-bottom border-secondary w-100 d-block mb-5"></span>
+  </div>
+
+  <div class="container shadow-lg py-4">
+    <h5 class="text-center">Please Fill in the Details of items you wish to purchase in the open columns below;</h5>
+    <form class=" mt-4">
+      <div class="col-md-12 row justify-content-around align-items-end mx-md-auto mx-0 px-0 mb-4">
+        <div class="col-md-4 col-sm-8 col-8 form-floating  ms-0 ps-0  ms-lg-1 ps-lg-1">
+          <input name="url" type="url" class="form-control" id="item-url" placeholder="Item url" required>
+          <label for="item-url" class="form-label">Item URL</label>
+        </div>
+        <div class="col-md-4 mt-3 mt-md-0 order-md-0 order-1 col-10 mx-0 px-0 form-floating ">
+          <textarea name="details" type="text" class="form-control" id="detail"
+            placeholder="Item details, e.g brand, color, size etc" required
+            style="height: 100px !important;"></textarea>
+          <label for="detail" class="form-label">Item details [color, size etc]</label>
+        </div>
+
+        <div class="col-md-2  col-4 form-floating  mx-0 px-0 ">
+          <input type="number" min="0" name="quantity" class="form-control" id="quantity" placeholder="Item quantity"
+            required>
+          <label for="quantity" class="form-label">Quantity</label>
+        </div>
+        <div class="col-1 order-sm- order-1 mx-0 px-0">
+          <a class="position-absolut cursor-pointe btn btn-outline-light btn-outline-dange shadow-sm text-dark"
+            style=""><i class="fas fa-times"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-12 more-fields-container"></div>
+
+      <a class="btn btn-outline-dark border-0 shadow ms-sm-4 add-more"> <i class="fas fa-plus"></i> Add more</a>
+
+      <div class="button-group mt-5 d-flex flex-column align-items-center">
+        <div><button type="submit" class="btn btn-primary px-4 me-3">Submit</button>
+          <button type="reset" class="btn btn-outline-dark"
+            onclick="(_=>$('.more-fields-container').children().hide(200,_=>$('.more-fields-container').children().remove()))()">Reset
+            Form</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>

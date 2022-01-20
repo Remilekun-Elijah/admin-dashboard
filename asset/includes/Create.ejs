@@ -1,0 +1,206 @@
+<div class="container-fluid">
+  <div class="header flex justify-center align-center">
+    <h3>Create something magical that gets delivered to your - 
+      <div class="animating-textCon d-inline">
+				<span class="dynamic-text">self.</span>
+				<span class="dynamic-text pe-0 me-0" style="display: none;">friend.</span>
+				<span class="dynamic-text"  style="display: none;">family.</span>
+				<span class="dynamic-text" style="display: none;">staff.</span>
+				<span class="dynamic-text" style="display: none;">bestie.</span>
+			</div>
+    </h3>
+  </div>
+  <br>
+  <div class="">
+    <center><span class="page-title text-center" style="top: 355px !important">Create Order</span></center>
+    <span style="margin-top: -10px; z-index: -5 !important;"
+      class="border-bottom border-secondary w-100 d-block mb-5"></span>
+  </div>
+
+  <div class="mt-5 container-fluid">
+
+
+    <div class="row mb-5 justify-content-center align-items-center create-form-btn-container">
+      <div class="col-sm-5 col-md-3 col-10 card card-deck">
+        <div class="card-body d-flex justify-content-center py-">
+          <div class="">
+            <img src="./asset/image/products/10.png" alt="" height="200px" class="w-100">
+            <strong class="text-primary mt-0 small">Create shipment to/in our warehouse
+              in USA</strong>
+          </div>
+        </div>
+        <div class="card-footer px-0 d-flex justify-content-center">
+          <a class="btn px-0 btn-primary cursor-pointer form-control createBtn" style="border-radius: 5px;">Create</a>
+        </div>
+      </div>
+
+      <div class="col-sm-5 col-md-3 col-10 card card-deck mx-md-3 ms-sm-3 mt-sm-0 mt-4">
+        <div class="card-body d-flex justify-content-center py-">
+          <div class="">
+            <img src="./asset/image/products/11.png" alt="" height="200px" class="w-100">
+            <strong class="text-primary mt-0 small">Create shipment to/in our warehouse
+              in United Kingdom</strong>
+          </div>
+        </div>
+        <div class="card-footer px-0 d-flex justify-content-center">
+          <a class="btn px-0 btn-primary cursor-pointer form-control createBtn" style="border-radius: 5px;">Create</a>
+        </div>
+      </div>
+
+      <div class="col-sm-5 col-md-3 col-10 mt-md-0 mt-4 card">
+        <div class="card-body d-flex justify-content-center py-">
+          <div class="">
+            <img src="./asset/image/products/12.png" alt="" height="200px" class="w-100">
+            <strong class="text-primary mt-0 small">Create shipment to/in our warehouse
+              in China</strong>
+          </div>
+        </div>
+        <div class="card-footer px-0 d-flex justify-content-center">
+          <a class="btn px-0 btn-primary form-control cursor-pointer createBtn" style="border-radius: 5px;">Create</a>
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <div class="mt-5 incoming_shipment_form container shadow pb-4 pt-1" style="display: none">
+      <span class="close" style="position: absolute; right:7.9%;"><i
+          class="fas fa-times py-1 px-2 rounded border border-danger text-bold text-danger d-block cursor-pointer"></i></span>
+      <div class="text-center mb-5 mt-4 pt-3">
+        <h3 class="text-center">Incoming Shipment</h3>
+        <p class="mb-0 pb-0">Please fill the shipment details you are sending to/out our warehouse, </p>
+        <p class="mt-0 pt-0">you must select the correct Hey-Logistics warehouse location and other required info.</p>
+      </div>
+
+      <div class="d-flex justify-content-center ">
+        <form class="row g-3 pb-5">
+          <div class="col-md-6 form-floating">
+            <select class="form-select cursor-pointer" id="floatingSelect" aria-label="Floating label select example"
+              name="warehouse_location" required>
+              <option value="usa" selected>United States</option>
+              <option value="uk">United Kingdom</option>
+              <option value="china">CHINA</option>
+            </select>
+            <label for="floatingSelect">Warehouse Location</label>
+          </div>
+          <div class="col-md-5">
+            <div class="input-group mt-sm-2">
+              <span class="input-group-text bg-primary text-white border-0" id="basic-addon1">Add Insurance</span>
+              <div class="form-check form-check-inline ms-4 mt-2">
+                <label class="form-check-label cursor-pointer" for="insuranceInput1">Yes</label>
+                <input class="form-check-input cursor-pointer" type="radio" name="insurance" checked
+                  id="insuranceInput1" value="Yes">
+              </div>
+              <div class="form-check form-check-inline mt-2">
+                <label class="form-check-label cursor-pointer" for="insuranceInput2">No</label>
+                <input class="form-check-input cursor-pointer" type="radio" name="insurance" id="insuranceInput2"
+                  value="No">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 form-floating">
+            <input type="text" class="form-control" id="delivery"
+              placeholder="Your delivery / ecommerce company sending your goods" name="delivery_company">
+            <label for="delivery" class="form-label">Delivery/e-Commerce Company</label>
+          </div>
+          <div class="col-md-5">
+            <div class="input-group mt-sm-2">
+              <span class="input-group-text bg-primary text-white border-0 me-4" id="basic-addon1">Delivery Type</span>
+              <div class="form-check form-check-inline mt-2">
+                <label class="form-check-label cursor-pointer" for="delivery1">Home Delivery</label>
+                <input class="form-check-input cursor-pointer" type="radio" name="delivery_type" checked id="delivery1"
+                  value="Home delivery">
+              </div>
+              <div class="form-check form-check-inline mt-2">
+                <label class="form-check-label cursor-pointer" for="delivery2">Office PickUp</label>
+                <input class="form-check-input cursor-pointer" type="radio" name="delivery_type" id="delivery2"
+                  value="Office Pickup">
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 form-floating">
+            <input name="tracking_number" type="text" class="form-control" id="tracking_id"
+              placeholder="Your goods tracking number">
+            <label for="tracking_id" class="form-label">The Trackin Number [Optional]</label>
+          </div>
+          <div class="col-md-4 form-floating">
+            <input name="delivery_address" type="text" class="form-control" id="delivery_address"
+              placeholder="Your delivery address" required>
+            <label for="delivery_address" class="form-label">Delivery address</label>
+          </div>
+          <div class="col-md-2 form-floating">
+            <input name="city" type="text" class="form-control" id="city" placeholder="Your delivery city" required>
+            <label for="city" class="form-label">City</label>
+          </div>
+
+          <div class="row mt-4">
+            <div class="col-md-6 form-floating">
+              <textarea name="description" type="text" class="form-control" style="height: 120px !important"
+                id="tracking_id" placeholder="Your goods tracking number" required></textarea>
+              <label for="tracking_id" class="form-label">Item Description [size, color, etc]</label>
+            </div>
+            <div class="col-md-6 col-12 row m- -0">
+              <div class="col-md-12 row justify-content-around mx-md-auto mx-0 px-0">
+                <div class="col-md-4 col-12 form-floating  mx- px">
+                  <input name="state" type="text" class="form-control" id="state" placeholder="Your delivery state"
+                    required>
+                  <label for="state" class="form-label">State</label>
+                </div>
+                <div class="col-md-4 col-12 form-floating  mx- px-">
+                  <input name="zip" type="text" class="form-control" id="zip" placeholder="Your delivery zip code"
+                    required>
+                  <label for="zip" class="form-label">ZIP</label>
+                </div>
+
+                <div class="col-md-4 col-sm-12 form-floating  mx- px-">
+                  <input type="text" name="nig" class="form-control" id="ng" placeholder="Your delivery NIG">
+                  <label for="ng" class="form-label">NIG</label>
+                </div>
+
+              </div>
+              <div class="input-group my-4 col-md-12 col-12 number">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">+234</button>
+                <ul class="dropdown-menu dropdown-menu-dark" style="height: 200px; overflow-y: auto">
+                  <!-- DYNAMIC VALUE HERE -->
+                  <li class="px-2"><input type='text' class='form-control dropdown-header search'
+                      placeholder='Search by country'></li>
+                  <li>
+                    <hr class='dropdown-divider'>
+                  </li>
+                </ul>
+                <input type="number" name="number" min="0" class="form-control"
+                  aria-label="Text input with dropdown button" placeholder="Phone number" required>
+              </div>
+            </div>
+          </div>
+          <div class="row align-items-end">
+            <div class="col-md-6 form-floating">
+              <select name="shipment_type" class="form-select cursor-pointer" id="floatingSelect"
+                aria-label="Floating label select example" required>
+                <option value="air">Air Cargo</option>
+                <option value="ocean">Ocean Cargo</option>
+              </select>
+              <label for="floatingSelect">Shipment Type to Nigeria</label>
+            </div>
+            <div class="col-md-6 form-floating">
+              <textarea name="instruction" style="height: 120px !important" type="text" class="form-control"
+                id="tracking_id" placeholder="What should we do before shipping?"></textarea>
+              <label for="tracking_id" class="form-label">Shipping instruction</label>
+            </div>
+          </div>
+
+          <div class="col-12 d-flex justify-content-center mt-5">
+            <button type="submit" class="btn btn-primary px-4 me-3">Create Order</button> 
+            <button type="reset" class="btn btn-outline-dark px-4">Reset Form</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 body {
-    font-family: 'Poppins', Georgia, Cursive, sans-serif;
+    font-family: 'DM Sans', 'Poppins', Georgia, Cursive, sans-serif !important;
 }
 
 *,
@@ -10,7 +11,9 @@ body {
     padding: 0;
 }
 
-
+.cursor-pointer{
+    cursor: pointer;
+}
 /** Flex Box **/
 
 .flex {
@@ -49,6 +52,7 @@ body {
 }
 
 
+
 /** BackGround **/
 
 .bg-dark {
@@ -83,6 +87,10 @@ body {
     padding: 0.5rem 1rem;
     text-decoration: none;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+nav li a {
+  cursor: pointer;
 }
 
 .black-text {
