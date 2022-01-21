@@ -46,7 +46,9 @@
 <body>
 	<nav class="navbar navbar-expand-sm navbar-light shadow bg-light py-0 my-0 fixed-top">
 		<div class="container-fluid ms-0 ps-0">
-			<a class="navbar-brand text-30 ms-2 text-bold" href="#">ADMIN</a>
+			<a class="navbar-brand text-30 ms-2 text-bold" href="#">
+				<img src="./asset/image/logo.png" alt="" width="80" height="50" srcset="">
+			</a>
 
 			<span class="navbar-burger">
 				<span id="x" class="navToggler"></span>
@@ -325,9 +327,50 @@
 		});
 
 		$('.close-toast').click(function () { $($(this).parents()[1]).hide(250); });
+
+
+const scroll = {
+	target: 0,
+	current: 0,
+	limit: 0,
+	ease: 0.05,
+}
+	function getScrollTarget(e) {
+			scroll.target = e.deltaY;
+		}
+		document.querySelector("#pages").addEventListener('mousewheel', getScrollTarget);
+
+function lerp (current,	target) {
+			let distanceBtwin = target - current;
+			let distanceTravel = distanceBtwin * scroll.ease;
+	return current	+ distanceTravel;
+}
+
+function clamp (value, min, max) {
+			return Math.min(Math.max(value, min), max);
+}
+
+function smoothScroll(){
+	const maxScroll = document.querySelector("#pages").clientHeight - window.innerHeight;
+	scroll.target = clamp(scroll.target, 0, maxScroll);
+	const {	current, target} = scroll;
+	scroll.current = lerp(current, target);
+
+	document.querySelector("#pages").style.transform = `translateY(-${scroll.current}px)`;
+	
+	window.requestAnimationFrame(smoothScroll);
+
+}
+
+smoothScroll();
+
+
+// lerp(5, 100);
+
 	</script>
 
 	<script type="text/javascript" src="./asset/js/app.js"></script>
+	<!-- <script type="text/javascript" src="https://remilekun-elijah.github.io/admin-dashboard/asset/js/app.js"></script> -->
 </body>
 
 </html>

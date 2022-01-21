@@ -1,4 +1,5 @@
-// jshint {esversion: 8}
+//esversion: 6
+
 class Admin {}
 
 
@@ -146,23 +147,9 @@ class UI {
 
 		// then display the provided page
 		$(`#${page}`).show(250, _=> $(`#${page}`).addClass('active'));
-
-		// how to create a noscript tag in html
-		
-
-		
-
-
 	}
-
-	 name(params) {
-			// how to create a variable 
-
-
-		
-	}
+	
 	create() {
-
 		function toggleCreateForm() {
 
 			$('#create .createBtn').click(e => {
@@ -203,8 +190,7 @@ class UI {
 			
 			$("#create .number .dropdown-menu").on("click", selectCountryCode);
 		}
-	
-		
+
 
 		return {
 			toggleCreateForm,
@@ -216,14 +202,14 @@ class UI {
 	personalShopper() {
 		let id = parseInt(Math.random() * 10000), timer = 0;
 		function addMoreFormFields() {
-			
+	
 			$("#personal_shopper form .add-more").click(function () {
-				console.log(id);
+				
 				id++;
 				let tagId = `p_shopper_${id}`;
 				const html = //html
 					`
-					<div class="row justify-content-around align-items-end mx-md-auto mx-0 px-0 mb-4" style='display:none' id='${tagId}'>
+					<div class="row p_form_field justify-content-around align-items-end mx-md-auto mx-0 px-0 mb-4" style='display:none' id='${tagId}'>
 						<div class="col-md-4 col-sm-8 col-8 form-floating  ms-0 ps-0  ms-lg-1 ps-lg-1">
 							<input name="url" type="url" class="form-control" id="item-url" placeholder="Item url" required>
 							<label for="item-url" class="form-label">Item URL</label>
@@ -238,13 +224,17 @@ class UI {
 							<label for="quantity" class="form-label">Quantity</label>
 						</div>
 						<div class="col-1 order-sm- order-1 mx-0 px-0">
-							<a class="position-absolut cursor-pointe btn btn-outline-light shadow-sm btn-outline-dange text-dark" onclick="(_=>$(this).parent().parent().hide(200,e_=>$(this).parent().parent().remove()))()"><i class="fas fa-times"></i></a>
+							<a class="cursor-pointe btn btn-outline-light shadow-sm btn-outline-dange text-dark del__parent"><i class="fas fa-times"></i></a>
 						</div>
 					</div>
 				`;
 				this.previousElementSibling.innerHTML += html;
 
 				$(`#${tagId}`).show(150);
+				$('.p_form_field .del__parent').click(function(){
+				
+				$('.p_form_field').length > 1 ? $(this).parent().parent().hide(200,e_=>$(this).parent().parent().remove()) :'';
+				});
 			});
 		}
 
@@ -279,8 +269,7 @@ class UI {
 
 
 	static async start() {
-
-		let code = await UTILS.getPhoneCode("NG");
+		let code = await UTILS.getPhoneCode("GH");
 		$("#create .number button").text(code);
 
 		const phones = await UTILS.getPhoneAndCountry();
@@ -309,7 +298,6 @@ class UI {
 		ui.personalShopper().addMoreFormFields();
 		setInterval(ui.personalShopper().animateHeader, 3000);
 	}
-
 
 }
  
