@@ -57,7 +57,7 @@ class UTILS {
 
 
 class UI {
-	#initialPage = "create";
+	#initialPage = "usa_address";
 	constructor() {
 
 		this.sidebar = {
